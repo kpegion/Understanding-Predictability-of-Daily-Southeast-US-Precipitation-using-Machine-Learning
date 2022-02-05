@@ -1,0 +1,962 @@
+%
+% JOURNAL ABBREVIATIONS
+%
+@STRING{AMS 	= "Amer.\ Meteor.\ Soc."}
+@STRING{AGU 	= "Amer.\ Geophys.\ Union"}
+@STRING{AIP 	= "Amer. Inst. Phys."}
+@STRING{ADGEO     = "Adv.\ Geosci."}
+@STRING{AFM       = "Agric.\ For.\ Meteor."}
+@STRING{AM        = "Ann.\ Meteor."}
+@STRING{AN        = "Astrophys.\ Norv."}		% Astrophysica Norvegica
+@STRING{AO        = "Atmos.--Ocean"}			% Atmosphere--Ocean, published by Canadian Meteorological Society (CMOS)
+@STRING{AR        = "Atmos.\ Res."}			% Atmospheric Research
+@STRING{ARFM      = "Annu.\ Rev.\ Fluid Mech."}
+@STRING{AUMET     = "Aust.\ Meteor.\ Mag."}
+@STRING{BAMS      = "Bull.\ Amer.\ Meteor.\ Soc."}
+@STRING{CAP       = "Contrib.\ Atmos.\ Phys."}
+@STRING{CC        = "Climate Change"}      % Climate Change 
+@STRING{CCH       = "Climatic Change"}			% Climatic Change
+@STRING{CDYN      = "Climate Dyn."}
+@STRING{CHAOS     = "Chaos"}
+@STRING{COL       = "Collier's"}
+@STRING{CRS       = "Cont.\ Shelf Res."}
+@STRING{DAO       = "Dyn.\ Atmos.\ Oceans"}
+@STRING{ECO       = "Ecology"}
+@STRING{EI        = "Earth Interact."}
+@STRING{GA        = "Geophysica"}			% Geophysica, published by Geophysical Society of Finland 
+@STRING{GEOMAG    = "Geophys.\ Mag."}
+@STRING{GN        = "Geophys.\ Norv."}			% Geophysica Norvegica
+@STRING{GRL       = "Geophys.\ Res.\ Lett."}
+@STRING{GEOINT    = "Geofis.\ Int."}			% Geofisica Internacional (Mexican journal -- vols. 3--5 contained proceedings from a hurricane conference
+@STRING{GEOPUB    = "Geofys.\ Publ."}
+@STRING{GPC       = "Global Planet.\ Change"}
+@STRING{HP        = "Health Phys."}
+@STRING{IAOP      = "Izv.\ Atmos.\ Ocean.\ Phys.\ (Engl.\ Transl.)"}
+@STRING{IJC       = "Int.\ J.\ Climatol."}
+@STRING{JAM       = "J.\ Appl.\ Meteor."}		% renamed to name below in 2006
+@STRING{JAMC      = "J.\ Appl.\ Meteor.\ Climatol."}  	% Journal of Applied Meteorology and Climatology (this journal used to be called the Journal of Applied Meteorology before 2006)
+@STRING{JAS       = "J.\ Atmos.\ Sci."}
+@STRING{JAOT      = "J.\ Atmos.\ Oceanic Technol."}
+@STRING{JCAM      = "J.\ Climate Appl.\ Meteor."}	% from 1983--87, now JAMC
+@STRING{JCLI      = "J.\ Climate"}
+@STRING{JCR       = "J.\ Coastal Res."}
+@STRING{JFM       = "J.\ Fluid\ Mech."}
+@STRING{JEM       = "J.\ Eng.\ Math."}			% Journal of Engineering Mathematics
+@STRING{JGR       = "J.\ Geophys.\ Res."}
+@STRING{JHM       = "J.\ Hydrometeor."}
+@STRING{JMS       = "J.\ Mar.\ Syst."}
+@STRING{JM        = "J.\ Meteor."}
+@STRING{JMR       = "J.\ Mar.\ Res."}
+@STRING{JMSJ      = "J.\ Meteor.\ Soc.\ Japan"}
+@STRING{JPO       = "J.\ Phys.\ Oceanogr."}
+@STRING{JOCEAN    = "J.\ Oceanogr."}			% Journal of Oceanography
+@STRING{JOSJ      = "J.\ Oceanogr.\ Soc.\ Japan"}
+@STRING{JSE       = "J.\ Struct.\ Eng."}	% Journal of Structural Engineering at ASCE
+@STRING{JTM       = "J.\ Tropical Meteor."}
+@STRING{JWEIA     = "J.\ Wind Eng.\ Ind.\ Aerodyn."}
+@STRING{MA        = "Meteor.\ Appl."}
+@STRING{MAP       = "Meteor.\ Atmos.\ Phys."}
+@STRING{METMON    = "Meteor.\ Monogr."}
+@STRING{METZEIT   = "Meteor.\ Z."}
+@STRING{MWL       = "Mar.\ Wea.\ Log"}
+@STRING{MWR       = "Mon.\ Wea.\ Rev."}
+@STRING{NAT       = "Nature"}
+@STRING{NHR       = "Nat.\ Hazards Rev."}
+@STRING{NWD       = "Natl.\ Weather Dig."}
+@STRING{OA        = "Oceanol. Aeta"}
+@STRING{OCEAN     = "Oceanography"}                	% a quarterly journal of The Oceanography Society
+@STRING{PAG       = "Pure Appl.\ Geophys."}
+@STRING{PF        = "Phys.\ Fluids"}
+@STRING{PHYSD     = "Physica D"}
+@STRING{PMG       = "Pap.\ Meteor.\ Geophys."}	% Papers in Meteorology and Geophysics
+@STRING{PNAS      = "Proc.\ Natl.\ Acad.\ Sci.\ (USA)"}
+@STRING{PRE       = "Phys.\ Rev.\ E"}
+@STRING{PRSA      = "Proc.\ Roy.\ Soc."}
+@STRING{PT        = "Phys.\ Today"}
+@STRING{PTRS      = "Philos.\ Trans.\ Roy.\ Soc.\ London"}
+@STRING{QJRMS     = "Quart.\ J.\ Roy.\ Meteor.\ Soc."}
+@STRING{RGEO      = "Rev. Geophys."}
+@STRING{SCI       = "Science"}
+@STRING{SOLA      = "SOLA"}				% Scientific Online Letters on the Atmosphere
+@STRING{TAGU      = "Eos, Trans.\ Amer.\ Geophys.\ Union"}
+@STRING{TELLUS    = "Tellus"}
+@STRING{TCFD      = "Theor.\ Comput.\ Fluid Dyn."}
+@STRING{WEA       = "Weather"}
+@STRING{WW        = "Weatherwise"}
+@STRING{WF        = "Wea.\ Forecasting"}
+@STRING{WMOB      = "WMO Bull."}
+
+
+@article{lin_observed_2009,
+	title = {An {Observed} {Connection} between the {North} {Atlantic} {Oscillation} and the {Madden}–{Julian} {Oscillation}},
+	volume = {22},
+	doi = {10.1175/2008JCLI2515.1},
+	language = {English},
+	number = {2},
+	journal = {J. Climate},
+	author = {Lin, Hai and Brunet, Gilbert and Derome, Jacques},
+	month = jan,
+	year = {2009},
+	pages = {364--380},
+}
+
+@article{wheeler_all-season_2004,
+	title = {An all-season real-time multivariate {MJO} index: {Development} of an index for monitoring and prediction},
+	volume = {132},
+	doi = {10.1175/1520-0493(2004)132&lt;1917:AARMMI&gt;2.0.CO;2},
+	language = {English},
+	number = {8},
+	journal = {Mon. Wea. Rev.},
+	author = {Wheeler, M. C. and HH Hendon},
+	month = aug,
+	year = {2004},
+	pages = {1917--1932},
+}
+
+@article{stan_intra-seasonal_2019,
+	title = {Intra-seasonal and seasonal variability of the {Northern} {Hemisphere} extra-tropics},
+	doi = {10.1007/s00382-019-04827-9},
+	abstract = {Climate Dynamics, https://doi.org/10.1007/s00382-019-04827-9},
+	journal = {Clim Dyn},
+	author = {Stan, Cristiana and Krishnamurthy, V.},
+	month = may,
+	year = {2019},
+	pages = {1--19},
+}
+
+@article{zhou_composite_2011,
+	title = {A composite study of the {MJO} influence on the surface air temperature and precipitation over the {Continental} {United} {States}},
+	volume = {38},
+	doi = {10.1007/s00382-011-1001-9},
+	language = {English},
+	number = {7-8},
+	journal = {Clim Dyn},
+	author = {Zhou, Shuntai and L\&apos;Heureux, Michelle and Weaver, Scott and Kumar, Arun},
+	month = feb,
+	year = {2011},
+	pages = {1459--1471},
+}
+
+@article{cassou_intraseasonal_2008,
+	title = {Intraseasonal interaction between the {Madden}–{Julian} {Oscillation} and the {North} {Atlantic} {Oscillation}},
+	volume = {455},
+	doi = {10.1038/nature07286},
+	language = {English},
+	number = {7212},
+	journal = {Nature},
+	author = {Cassou, Christophe},
+	month = sep,
+	year = {2008},
+	pages = {523--527},
+}
+
+@article{becker_short-term_2013,
+	title = {Short-{Term} {Climate} {Extremes}: {Prediction} {Skill} and {Predictability}},
+	volume = {26},
+	doi = {10.1175/JCLI-D-12-00177.1},
+	language = {English},
+	number = {2},
+	journal = {J. Climate},
+	author = {Becker, Emily J. and Van Den Dool, Huug and Peña, Malaquias},
+	month = jan,
+	year = {2013},
+	pages = {512--531},
+}
+
+@article{schubert_us_2009,
+	title = {A {US} {CLIVAR} project to assess and compare the responses of global climate models to drought-related {SST} forcing patterns: overview and results},
+	doi = {10.1175/2009JCLI3060.1},
+	journal = {J. Climate},
+	author = {Schubert, S. and Gutzler, D. and Wang, H. and Dai, A.},
+	year = {2009},
+}
+
+@article{stan_review_2017,
+	title = {Review of {Tropical}-{Extratropical} {Teleconnections} on {Intraseasonal} {Time} {Scales}},
+	volume = {55},
+	doi = {10.1002/2016RG000538},
+	language = {English},
+	number = {4},
+	journal = {Rev. Geophys.},
+	author = {Stan, Cristiana and Straus, David M. and Frederiksen, Jorgen S. and Lin, Hai and Maloney, Eric D. and Schumacher, Courtney},
+	month = oct,
+	year = {2017},
+	pages = {902--937},
+}
+
+@article{pedregosa_scikit-learn_2011,
+	title = {Scikit-learn: {Machine} {Learning} in {Python}},
+	volume = {12},
+	journal = {Journal of Machine Learning Research},
+	author = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V. and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P. and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+	year = {2011},
+	pages = {2825--2830},
+}
+
+@article{riddle_impact_2013,
+	title = {The impact of the {MJO} on clusters of wintertime circulation anomalies over the {North} {American} region},
+	volume = {40},
+	doi = {10.1007/s00382-012-1493-y},
+	language = {English},
+	number = {7-8},
+	journal = {Clim Dyn},
+	author = {Riddle, Emily E. and Stoner, Marshall B. and Johnson, Nathaniel C. and L’Heureux, Michelle L. and Collins, Dan C. and Feldstein, Steven B.},
+	year = {2013},
+	pages = {1749--1766},
+}
+
+@article{murphy_reliability_1977,
+	title = {Reliability of subjective probability forecasts of precipitation and temperature},
+	volume = {26},
+	doi = {10.2307/2346866},
+	number = {1},
+	journal = {Journal of the Royal Statisical Society},
+	author = {Murphy, A. H. and Statistics, RL Winkler Applied and 1977},
+	year = {1977},
+	pages = {41},
+}
+
+@article{dee_era-interim_2011,
+	title = {The {ERA}-{Interim} reanalysis: configuration and performance of the data assimilation system},
+	volume = {137},
+	doi = {10.1002/qj.828},
+	language = {English},
+	number = {656},
+	journal = {Q.J.R. Meteorol. Soc.},
+	author = {Dee, D. P. and Uppala, S. M. and Simmons, A. J. and Berrisford, P. and Poli, P. and Kobayashi, S. and Andrae, U. and Balmaseda, M. A. and Balsamo, G. and Bauer, P. and Bechtold, P. and Beljaars, A. C. M. and van de Berg, L. and Bidlot, J. and Bormann, N. and Delsol, C. and Dragani, R. and Fuentes, M. and Geer, A. J. and Haimberger, L. and Healy, S. B. and Hersbach, H. and Hólm, E. V. and Isaksen, L. and Kållberg, P. and Köhler, M. and Matricardi, M. and McNally, A. P. and Monge-Sanz, B. M. and Morcrette, J. J. and Park, B. K. and Peubey, C. and de Rosnay, P. and Tavolato, C. and Thépaut, J. N. and Vitart, F.},
+	month = apr,
+	year = {2011},
+	pages = {553--597},
+}
+
+@article{pegion_subseasonal_2019,
+	title = {The {Subseasonal} {Experiment} ({SubX}): {A} {Multimodel} {Subseasonal} {Prediction} {Experiment}},
+	volume = {100},
+	issn = {0003-0007},
+	doi = {10.1175/BAMS-D-18-0270.1},
+	language = {en},
+	number = {10},
+	urldate = {2020-11-16},
+	journal = {Bull. Amer. Meteor. Soc.},
+	author = {Pegion, Kathy and Kirtman, Ben P. and Becker, Emily and Collins, Dan C. and LaJoie, Emerson and Burgman, Robert and Bell, Ray and DelSole, Timothy and Min, Dughong and Zhu, Yuejian and Li, Wei and Sinsky, Eric and Guan, Hong and Gottschalck, Jon and Metzger, E. Joseph and Barton, Neil P. and Achuthavarier, Deepthi and Marshak, Jelena and Koster, Randal D. and Lin, Hai and Gagnon, Normand and Bell, Michael and Tippett, Michael K. and Robertson, Andrew W. and Sun, Shan and Benjamin, Stanley G. and Green, Benjamin W. and Bleck, Rainer and Kim, Hyemi},
+	month = oct,
+	year = {2019},
+	note = {Publisher: American Meteorological Society},
+	pages = {2043--2060},
+}
+
+@article{becker_modulation_2011,
+	title = {Modulation of {Cold}-{Season} {U}.{S}. {Daily} {Precipitation} by the {Madden}–{Julian} {Oscillation}},
+	volume = {24},
+	issn = {0894-8755},
+	url = {http://journals.ametsoc.org/jcli/article/24/19/5157/99308/Modulation-of-Cold-Season-U-S-Daily-Precipitation},
+	doi = {10.1175/2011JCLI4018.1},
+	language = {en},
+	number = {19},
+	urldate = {2020-11-16},
+	journal = {J. Climate},
+	author = {Becker, Emily J. and Berbery, Ernesto Hugo and Higgins, R. Wayne},
+	month = oct,
+	year = {2011},
+	note = {Publisher: American Meteorological Society},
+	pages = {5157--5166},
+}
+
+@article{arcodia_how_2020,
+	title = {How {MJO} {Teleconnections} and {ENSO} {Interference} {Impacts} {U}.{S}. {Precipitation}},
+	volume = {33},
+	issn = {0894-8755},
+	url = {https://journals.ametsoc.org/jcli/article/33/11/4621/345274/How-MJO-Teleconnections-and-ENSO-Interference},
+	doi = {10.1175/JCLI-D-19-0448.1},
+	language = {en},
+	number = {11},
+	urldate = {2020-11-16},
+	journal = {J. Climate},
+	author = {Arcodia, Marybeth C. and Kirtman, Ben P. and Siqueira, Leo S. P.},
+	month = jun,
+	year = {2020},
+	note = {Publisher: American Meteorological Society},
+	pages = {4621--4640},
+}
+
+@article{amini_control_2019,
+	title = {Control of {Storminess} over the {Pacific} and {North} {America} by {Circulation} {Regimes}},
+	volume = {52},
+	issn = {1432-0894},
+	url = {https://doi.org/10.1007/s00382-018-4409-7},
+	doi = {10.1007/s00382-018-4409-7},
+	language = {en},
+	number = {7},
+	urldate = {2020-11-25},
+	journal = {Clim Dyn},
+	author = {Amini, Sara and Straus, David M.},
+	month = apr,
+	year = {2019},
+	pages = {4749--4770},
+}
+
+@article{robertson_toward_2020,
+	title = {Toward {Identifying} {Subseasonal} {Forecasts} of {Opportunity} {Using} {North} {American} {Weather} {Regimes}},
+	volume = {148},
+	issn = {0027-0644},
+	url = {http://journals.ametsoc.org/mwr/article/148/5/1861/346723/Toward-Identifying-Subseasonal-Forecasts-of},
+	doi = {10.1175/MWR-D-19-0285.1},
+	language = {en},
+	number = {5},
+	urldate = {2020-11-26},
+	journal = {Mon. Wea. Rev.},
+	author = {Robertson, Andrew W. and Vigaud, Nicolas and Yuan, Jing and Tippett, Michael K.},
+	month = may,
+	year = {2020},
+	note = {Publisher: American Meteorological Society},
+	pages = {1861--1875},
+}
+
+@article{alber_innvestigate,
+	title = {{iNNvestigate} {Neural} {Networks}!},
+	language = {en},
+	author = {Alber, Maximilian and Lapuschkin, Sebastian and Seegerer, Philipp and Hagele, Miriam and Schutt, Kristof T and Montavon, Gregoire and Samek, Wojciech and Muller, Klaus-Robert and Dahne, Sven and Kindermans, Pieter-Jan},
+	pages = {8},
+	file = {Alber et al. - iNNvestigate Neural Networks!.pdf:/Users/kpegion/Zotero/storage/397JWI9B/Alber et al. - iNNvestigate Neural Networks!.pdf:application/pdf},
+	year = {2019},
+	journal = {Journal of Machine Learning Research},
+}
+
+@article{toms_physically_2020,
+	title = {Physically {Interpretable} {Neural} {Networks} for the {Geosciences}: {Applications} to {Earth} {System} {Variability}},
+	volume = {12},
+	copyright = {©2020. The Authors.},
+	issn = {1942-2466},
+	shorttitle = {Physically {Interpretable} {Neural} {Networks} for the {Geosciences}},
+	url = {http://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019MS002002},
+	doi = {https://doi.org/10.1029/2019MS002002},
+	language = {en},
+	number = {9},
+	urldate = {2020-12-19},
+	journal = {Journal of Advances in Modeling Earth Systems},
+	author = {Toms, Benjamin A. and Barnes, Elizabeth A. and Ebert‐Uphoff, Imme},
+	year = {2020},
+	note = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019MS002002},
+	keywords = {climate, geoscience, interpretable machine learning, layerwise relevance propagation, neural networks, pattern discovery},
+	pages = {e2019MS002002},
+}
+
+@article{kingma_adam_2017,
+	title = {Adam: {A} {Method} for {Stochastic} {Optimization}},
+	shorttitle = {Adam},
+	url = {http://arxiv.org/abs/1412.6980},
+	language = {en},
+	urldate = {2021-01-04},
+	journal = {arXiv:1412.6980 [cs]},
+	author = {Kingma, Diederik P. and Ba, Jimmy},
+	month = jan,
+	year = {2017},
+	note = {arXiv: 1412.6980},
+	keywords = {Computer Science - Machine Learning},
+}
+
+@article{ham_deep_2019,
+	title = {Deep learning for multi-year {ENSO} forecasts},
+	volume = {573},
+	copyright = {2019 The Author(s), under exclusive licence to Springer Nature Limited},
+	issn = {1476-4687},
+	url = {http://www.nature.com/articles/s41586-019-1559-7},
+	doi = {10.1038/s41586-019-1559-7},
+	language = {en},
+	number = {7775},
+	urldate = {2021-01-11},
+	journal = {Nature},
+	author = {Ham, Yoo-Geun and Kim, Jeong-Hwan and Luo, Jing-Jia},
+	month = sep,
+	year = {2019},
+	note = {Number: 7775
+Publisher: Nature Publishing Group},
+	pages = {568--572},
+}
+
+@article{krizhevsky_imagenet_2017,
+	title = {{ImageNet} classification with deep convolutional neural networks},
+	volume = {60},
+	issn = {0001-0782, 1557-7317},
+	url = {https://dl.acm.org/doi/10.1145/3065386},
+	doi = {10.1145/3065386},
+	language = {en},
+	number = {6},
+	urldate = {2021-01-11},
+	journal = {Commun. ACM},
+	author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+	month = may,
+	year = {2017},
+	pages = {84--90},
+}
+
+@inproceedings{he_deep_2016,
+	address = {Las Vegas, NV, USA},
+	title = {Deep {Residual} {Learning} for {Image} {Recognition}},
+	isbn = {978-1-4673-8851-1},
+	url = {http://ieeexplore.ieee.org/document/7780459/},
+	doi = {10.1109/CVPR.2016.90},
+	language = {en},
+	urldate = {2021-01-11},
+	booktitle = {2016 {IEEE} {Conference} on {Computer} {Vision} and {Pattern} {Recognition} ({CVPR})},
+	publisher = {IEEE},
+	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	month = jun,
+	year = {2016},
+	pages = {770--778},
+}
+
+@article{bach_pixel-wise_2015,
+	title = {On {Pixel}-{Wise} {Explanations} for {Non}-{Linear} {Classifier} {Decisions} by {Layer}-{Wise} {Relevance} {Propagation}},
+	volume = {10},
+	issn = {1932-6203},
+	url = {https://dx.plos.org/10.1371/journal.pone.0130140},
+	doi = {10.1371/journal.pone.0130140},
+	language = {en},
+	number = {7},
+	urldate = {2021-01-13},
+	journal = {PLoS ONE},
+	author = {Bach, Sebastian and Binder, Alexander and Montavon, Grégoire and Klauschen, Frederick and Müller, Klaus-Robert and Samek, Wojciech},
+	editor = {Suarez, Oscar Deniz},
+	month = jul,
+	year = {2015},
+	pages = {e0130140},
+}
+
+@article{li_beyond_2019,
+	title = {Beyond saliency: {Understanding} convolutional neural networks from saliency prediction on layer-wise relevance propagation},
+	volume = {83-84},
+	issn = {02628856},
+	shorttitle = {Beyond saliency},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0262885619300149},
+	doi = {10.1016/j.imavis.2019.02.005},
+	language = {en},
+	urldate = {2021-01-13},
+	journal = {Image and Vision Computing},
+	author = {Li, Heyi and Tian, Yunke and Mueller, Klaus and Chen, Xin},
+	month = mar,
+	year = {2019},
+	pages = {70--86},
+}
+
+@article{zeiler_visualizing_2013,
+	title = {Visualizing and {Understanding} {Convolutional} {Networks}},
+	url = {http://arxiv.org/abs/1311.2901},
+	urldate = {2021-01-18},
+	journal = {arXiv:1311.2901 [cs]},
+	author = {Zeiler, Matthew D. and Fergus, Rob},
+	month = nov,
+	year = {2013},
+	note = {arXiv: 1311.2901},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition},
+}
+
+@article{li_variation_2012,
+	title = {Variation of the {North} {Atlantic} subtropical high western ridge and its implication to {Southeastern} {US} summer precipitation},
+	volume = {39},
+	issn = {1432-0894},
+	url = {https://doi.org/10.1007/s00382-011-1214-y},
+	doi = {10.1007/s00382-011-1214-y},
+	language = {en},
+	number = {6},
+	urldate = {2021-07-15},
+	journal = {Clim Dyn},
+	author = {Li, Laifang and Li, Wenhong and Kushnir, Yochanan},
+	month = sep,
+	year = {2012},
+	pages = {1401--1412},
+}
+
+@article{li_impacts_2019,
+	title = {Impacts of the {North} {Atlantic} subtropical high on interannual variation of summertime heat stress over the conterminous {United} {States}},
+	volume = {53},
+	issn = {1432-0894},
+	url = {https://doi.org/10.1007/s00382-019-04708-1},
+	doi = {10.1007/s00382-019-04708-1},
+	language = {en},
+	number = {5},
+	urldate = {2021-07-29},
+	journal = {Clim Dyn},
+	author = {Li, Wenhong and Zou, Tian and Li, Laifang and Deng, Yi and Sun, Victor T. and Zhang, Qinghong and Layton, J. Bradley and Setoguchi, Soko},
+	month = sep,
+	year = {2019},
+	pages = {3345--3359},
+}
+
+@article{li_contribution_2015,
+	title = {Contribution of the {North} {Atlantic} subtropical high to regional climate model ({RCM}) skill in simulating southeastern {United} {States} summer precipitation},
+	volume = {45},
+	issn = {0930-7575, 1432-0894},
+	url = {http://link.springer.com/10.1007/s00382-014-2352-9},
+	doi = {10.1007/s00382-014-2352-9},
+	language = {en},
+	number = {1-2},
+	urldate = {2021-07-29},
+	journal = {Clim Dyn},
+	author = {Li, Laifang and Li, Wenhong and Jin, Jiming},
+	month = jul,
+	year = {2015},
+	pages = {477--491},
+}
+
+@article{mayer_subseasonal_2021,
+	title = {Subseasonal {Forecasts} of {Opportunity} {Identified} by an {Explainable} {Neural} {Network}},
+	volume = {48},
+	issn = {1944-8007},
+	url = {http://onlinelibrary.wiley.com/doi/abs/10.1029/2020GL092092},
+	doi = {10.1029/2020GL092092},
+	language = {en},
+	number = {10},
+	urldate = {2021-10-07},
+	journal = {Geophysical Research Letters},
+	author = {Mayer, Kirsten J. and Barnes, Elizabeth A.},
+	year = {2021},
+	note = {\_eprint: https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2020GL092092},
+	keywords = {explainable neural networks, forecasts of opportunity, subseasonal prediction, tropical-extratropical teleconnections},
+	pages = {e2020GL092092},
+}
+
+@article{mcgovern_making_2019,
+	title = {Making the {Black} {Box} {More} {Transparent}: {Understanding} the {Physical} {Implications} of {Machine} {Learning}},
+	volume = {100},
+	issn = {0003-0007, 1520-0477},
+	shorttitle = {Making the {Black} {Box} {More} {Transparent}},
+	url = {https://journals.ametsoc.org/view/journals/bams/100/11/bams-d-18-0195.1.xml},
+	doi = {10.1175/BAMS-D-18-0195.1},
+	language = {EN},
+	number = {11},
+	urldate = {2021-10-07},
+	journal = {Bulletin of the American Meteorological Society},
+	author = {McGovern, Amy and Lagerquist, Ryan and Gagne, David John and Jergensen, G. Eli and Elmore, Kimberly L. and Homeyer, Cameron R. and Smith, Travis},
+	month = nov,
+	year = {2019},
+	note = {Publisher: American Meteorological Society
+Section: Bulletin of the American Meteorological Society},
+	pages = {2175--2199},
+}
+
+@incollection{montavon_layer-wise_2019,
+	address = {Cham},
+	series = {Lecture {Notes} in {Computer} {Science}},
+	title = {Layer-{Wise} {Relevance} {Propagation}: {An} {Overview}},
+	isbn = {978-3-030-28954-6},
+	shorttitle = {Layer-{Wise} {Relevance} {Propagation}},
+	url = {https://doi.org/10.1007/978-3-030-28954-6_10},
+	language = {en},
+	urldate = {2021-10-21},
+	booktitle = {Explainable {AI}: {Interpreting}, {Explaining} and {Visualizing} {Deep} {Learning}},
+	publisher = {Springer International Publishing},
+	author = {Montavon, Grégoire and Binder, Alexander and Lapuschkin, Sebastian and Samek, Wojciech and Müller, Klaus-Robert},
+	editor = {Samek, Wojciech and Montavon, Grégoire and Vedaldi, Andrea and Hansen, Lars Kai and Müller, Klaus-Robert},
+	year = {2019},
+	doi = {10.1007/978-3-030-28954-6_10},
+	keywords = {Deep Neural Networks, Deep Taylor Decomposition, Explanations, Layer-wise Relevance Propagation},
+	pages = {193--209},
+}
+
+@article{burgman_simulated_2015,
+	title = {Simulated {U}.{S}. {Drought} {Response} to {Interannual} and {Decadal} {Pacific} {SST} {Variability}},
+	volume = {28},
+	issn = {0894-8755, 1520-0442},
+	url = {https://journals.ametsoc.org/view/journals/clim/28/12/jcli-d-14-00247.1.xml},
+	doi = {10.1175/JCLI-D-14-00247.1},
+	language = {EN},
+	number = {12},
+	urldate = {2022-01-03},
+	journal = {Journal of Climate},
+	author = {Burgman, Robert J. and Jang, Youkyoung},
+	month = jun,
+	year = {2015},
+	note = {Publisher: American Meteorological Society
+Section: Journal of Climate},
+	pages = {4688--4705},
+}
+
+@article{schubert_enso_2008,
+	title = {{ENSO} and {Wintertime} {Extreme} {Precipitation} {Events} over the {Contiguous} {United} {States}},
+	volume = {21},
+	issn = {0894-8755, 1520-0442},
+	url = {https://journals.ametsoc.org/view/journals/clim/21/1/2007jcli1705.1.xml},
+	doi = {10.1175/2007JCLI1705.1},
+	language = {EN},
+	number = {1},
+	urldate = {2022-01-05},
+	journal = {Journal of Climate},
+	author = {Schubert, Siegfried D. and Chang, Yehui and Suarez, Max J. and Pegion, Philip J.},
+	month = jan,
+	year = {2008},
+	note = {Publisher: American Meteorological Society
+Section: Journal of Climate},
+	pages = {22--39},
+}
+
+@article{becker_evolution_2020,
+	title = {Evolution of the {North} {American} {Multi}-{Model} {Ensemble}},
+	volume = {47},
+	issn = {1944-8007},
+	url = {http://onlinelibrary.wiley.com/doi/abs/10.1029/2020GL087408},
+	doi = {10.1029/2020GL087408},
+	language = {en},
+	number = {9},
+	urldate = {2022-01-06},
+	journal = {Geophysical Research Letters},
+	author = {Becker, Emily and Kirtman, Ben P. and Pegion, Kathy},
+	year = {2020},
+	note = {\_eprint: https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2020GL087408},
+	pages = {e2020GL087408},
+}
+
+@article{Manthos:2022,
+	author = {Manthos, Z. H. and Pegion, K. V. and Dirmeyer, P. A. and Stan, C.},
+    title = {The Relationship between Surface Weather over Nortj America and the Mid-Latitude Seasonal Oscillation},
+    volume = {under revision},
+    journal = {Dynamics of Atmospheres and Oceans},
+    year = {2022},
+}
+
+@article{toms_assessing_2021,
+	title = {Assessing {Decadal} {Predictability} in an {Earth}-{System} {Model} {Using} {Explainable} {Neural} {Networks}},
+	volume = {48},
+	issn = {1944-8007},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1029/2021GL093842},
+	doi = {10.1029/2021GL093842},
+	language = {en},
+	number = {12},
+	urldate = {2022-01-06},
+	journal = {Geophysical Research Letters},
+	author = {Toms, Benjamin A. and Barnes, Elizabeth A. and Hurrell, James W.},
+	year = {2021},
+	note = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2021GL093842},
+	keywords = {decadal predictability, explainable artificial intelligence, machine learning, neural networks},
+	pages = {e2021GL093842},
+}
+
+@article{mamalakis_neural_2021,
+	title = {Neural {Network} {Attribution} {Methods} for {Problems} in {Geoscience}: {A} {Novel} {Synthetic} {Benchmark} {Dataset}},
+	shorttitle = {Neural {Network} {Attribution} {Methods} for {Problems} in {Geoscience}},
+	url = {http://arxiv.org/abs/2103.10005},
+	urldate = {2022-01-06},
+	journal = {arXiv:2103.10005 [physics]},
+	author = {Mamalakis, Antonios and Ebert-Uphoff, Imme and Barnes, Elizabeth A.},
+	month = mar,
+	year = {2021},
+	note = {arXiv: 2103.10005},
+	keywords = {Computer Science - Machine Learning, Physics - Geophysics},
+}
+
+@article{barnes_indicator_2020,
+	title = {Indicator {Patterns} of {Forced} {Change} {Learned} by an {Artificial} {Neural} {Network}},
+	volume = {12},
+	issn = {1942-2466},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1029/2020MS002195},
+	doi = {10.1029/2020MS002195},
+	number = {9},
+	urldate = {2022-01-06},
+	journal = {Journal of Advances in Modeling Earth Systems},
+	author = {Barnes, Elizabeth A. and Toms, Benjamin and Hurrell, James W. and Ebert-Uphoff, Imme and Anderson, Chuck and Anderson, David},
+	year = {2020},
+	note = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2020MS002195},
+	pages = {e2020MS002195},
+}
+
+@article{toms_testing_2021,
+	title = {Testing the reliability of interpretable neural networks in geoscience using the {Madden}–{Julian} oscillation},
+	volume = {14},
+	issn = {1991-959X},
+	url = {https://gmd.copernicus.org/articles/14/4495/2021/},
+	doi = {10.5194/gmd-14-4495-2021},
+	language = {English},
+	number = {7},
+	urldate = {2022-01-06},
+	journal = {Geoscientific Model Development},
+	author = {Toms, Benjamin A. and Kashinath, Karthik and Prabhat and Yang, Da},
+	month = jul,
+	year = {2021},
+	note = {Publisher: Copernicus GmbH},
+	pages = {4495--4508},
+}
+
+@misc{noauthor_multimodel_nodate,
+	title = {Multimodel {Ensembling} of {Subseasonal} {Precipitation} {Forecasts} over {North} {America} in: {Monthly} {Weather} {Review} {Volume} 145 {Issue} 10 (2017)},
+	url = {https://journals-ametsoc-org.mutex.gmu.edu/view/journals/mwre/145/10/mwr-d-17-0092.1.xml},
+	urldate = {2022-01-06},
+}
+
+@article{ehsan_skill_2017,
+	title = {Skill and predictability in multimodel ensemble forecasts for {Northern} {Hemisphere} regions with dominant winter precipitation},
+	volume = {48},
+	issn = {0930-7575, 1432-0894},
+	url = {http://link.springer.com/10.1007/s00382-016-3267-4},
+	doi = {10.1007/s00382-016-3267-4},
+	language = {en},
+	number = {9-10},
+	urldate = {2022-01-06},
+	journal = {Clim Dyn},
+	author = {Ehsan, Muhammad Azhar and Tippett, Michael K. and Almazroui, Mansour and Ismail, Muhammad and Yousef, Ahmed and Kucharski, Fred and Omar, Mohamed and Hussein, Mahmoud and Alkhalaf, Abdulrahman A.},
+	month = may,
+	year = {2017},
+	pages = {3309--3324},
+}
+
+@article{welch_use_1967,
+	title = {The use of fast {Fourier} transform for the estimation of power spectra: {A} method based on time averaging over short, modified periodograms},
+	volume = {15},
+	issn = {1558-2582},
+	shorttitle = {The use of fast {Fourier} transform for the estimation of power spectra},
+	doi = {10.1109/TAU.1967.1161901},
+	number = {2},
+	journal = {IEEE Transactions on Audio and Electroacoustics},
+	author = {Welch, P.},
+	month = jun,
+	year = {1967},
+	note = {Conference Name: IEEE Transactions on Audio and Electroacoustics},
+	keywords = {Aging, Demodulation, Fast Fourier transforms, Fourier transforms, Reactive power, Shape, Stochastic processes, Testing, Time measurement},
+	pages = {70--73},
+}
+
+@article{virtanen_scipy_2020,
+	title = {{SciPy} 1.0: fundamental algorithms for scientific computing in {Python}},
+	volume = {17},
+	issn = {1548-7091, 1548-7105},
+	shorttitle = {{SciPy} 1.0},
+	url = {http://www.nature.com/articles/s41592-019-0686-2},
+	doi = {10.1038/s41592-019-0686-2},
+	language = {en},
+	number = {3},
+	urldate = {2022-01-06},
+	journal = {Nat Methods},
+	author = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and van der Walt, Stéfan J. and Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, C J and Polat, İlhan and Feng, Yu and Moore, Eric W. and VanderPlas, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and Harris, Charles R. and Archibald, Anne M. and Ribeiro, Antônio H. and Pedregosa, Fabian and van Mulbregt, Paul and {SciPy 1.0 Contributors} and Vijaykumar, Aditya and Bardelli, Alessandro Pietro and Rothberg, Alex and Hilboll, Andreas and Kloeckner, Andreas and Scopatz, Anthony and Lee, Antony and Rokem, Ariel and Woods, C. Nathan and Fulton, Chad and Masson, Charles and Häggström, Christian and Fitzgerald, Clark and Nicholson, David A. and Hagen, David R. and Pasechnik, Dmitrii V. and Olivetti, Emanuele and Martin, Eric and Wieser, Eric and Silva, Fabrice and Lenders, Felix and Wilhelm, Florian and Young, G. and Price, Gavin A. and Ingold, Gert-Ludwig and Allen, Gregory E. and Lee, Gregory R. and Audren, Hervé and Probst, Irvin and Dietrich, Jörg P. and Silterra, Jacob and Webber, James T and Slavič, Janko and Nothman, Joel and Buchner, Johannes and Kulick, Johannes and Schönberger, Johannes L. and de Miranda Cardoso, José Vinícius and Reimer, Joscha and Harrington, Joseph and Rodríguez, Juan Luis Cano and Nunez-Iglesias, Juan and Kuczynski, Justin and Tritz, Kevin and Thoma, Martin and Newville, Matthew and Kümmerer, Matthias and Bolingbroke, Maximilian and Tartre, Michael and Pak, Mikhail and Smith, Nathaniel J. and Nowaczyk, Nikolai and Shebanov, Nikolay and Pavlyk, Oleksandr and Brodtkorb, Per A. and Lee, Perry and McGibbon, Robert T. and Feldbauer, Roman and Lewis, Sam and Tygier, Sam and Sievert, Scott and Vigna, Sebastiano and Peterson, Stefan and More, Surhud and Pudlik, Tadeusz and Oshima, Takuya and Pingel, Thomas J. and Robitaille, Thomas P. and Spura, Thomas and Jones, Thouis R. and Cera, Tim and Leslie, Tim and Zito, Tiziano and Krauss, Tom and Upadhyay, Utkarsh and Halchenko, Yaroslav O. and Vázquez-Baeza, Yoshiki},
+	month = mar,
+	year = {2020},
+	pages = {261--272},
+}
+
+@misc{noauthor_how_nodate,
+	title = {How to cite {Keras} - {Cite} {Bay}},
+	url = {http://citebay.com/how-to-cite/keras/},
+	language = {en},
+	urldate = {2022-01-06},
+}
+
+@misc{noauthor_citing_nodate,
+	title = {Citing {TensorFlow}},
+	url = {https://www.tensorflow.org/about/bib},
+	language = {en},
+	urldate = {2022-01-06},
+	journal = {TensorFlow},
+	file = {Snapshot:/Users/kpegion/Zotero/storage/9BZYA9RF/bib.html:text/html},
+}
+
+@article{hoyer_xarray_2017,
+	title = {xarray: {N}-{D} labeled {Arrays} and {Datasets} in {Python}},
+	volume = {5},
+	issn = {2049-9647},
+	shorttitle = {xarray},
+	url = {http://openresearchsoftware.metajnl.com/articles/10.5334/jors.148/},
+	doi = {10.5334/jors.148},
+	language = {en},
+	number = {1},
+	urldate = {2022-01-06},
+	journal = {Journal of Open Research Software},
+	author = {Hoyer, Stephan and Hamman, Joe},
+	month = apr,
+	year = {2017},
+	note = {Number: 1
+Publisher: Ubiquity Press},
+	keywords = {data analysis, data, data handling, multidimensional, netCDF, pandas, Python},
+	pages = {10},
+}
+
+@misc{hoyer_xarray_2021,
+	title = {xarray},
+	url = {https://zenodo.org/record/5771208},
+	urldate = {2022-01-06},
+	publisher = {Zenodo},
+	author = {Hoyer, Stephan and Roos, Maximilian and Joseph, Hamman and Magin, Justus and Cherian, Deepak and Fitzgerald, Clark and Hauser, Mathias and Fujii, Keisuke and Maussion, Fabien and Imperiale, Guido and Clark, Spencer and Kleeman, Alex and Nicholas, Thomas and Kluyver, Thomas and Westling, Jimmy and Munroe, James and Amici, Alessandro and Barghini, Aureliana and Banihirwe, Anderson and Bell, Ray and Hatfield-Dodds, Zac and Abernathey, Ryan and Bovy, Benoît and Omotani, John and Mühlbauer, Kai and Roszko, Maximilian K. and Wolfram, Phillip J.},
+	month = dec,
+	year = {2021},
+	doi = {10.5281/zenodo.5771208},
+}
+
+@article{harris_array_2020,
+	title = {Array programming with {NumPy}},
+	volume = {585},
+	copyright = {2020 The Author(s)},
+	issn = {1476-4687},
+	url = {http://www.nature.com/articles/s41586-020-2649-2},
+	doi = {10.1038/s41586-020-2649-2},
+	language = {en},
+	number = {7825},
+	urldate = {2022-01-06},
+	journal = {Nature},
+	author = {Harris, Charles R. and Millman, K. Jarrod and van der Walt, Stéfan J. and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and van Kerkwijk, Marten H. and Brett, Matthew and Haldane, Allan and del Río, Jaime Fernández and Wiebe, Mark and Peterson, Pearu and Gérard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
+	month = sep,
+	year = {2020},
+	note = {Bandiera\_abtest: a
+Cc\_license\_type: cc\_by
+Cg\_type: Nature Research Journals
+Number: 7825
+Primary\_atype: Reviews
+Publisher: Nature Publishing Group
+Subject\_term: Computational neuroscience;Computational science;Computer science;Software;Solar physics
+Subject\_term\_id: computational-neuroscience;computational-science;computer-science;software;solar-physics},
+	keywords = {Computational neuroscience, Computational science, Computer science, Software, Solar physics},
+	pages = {357--362},
+}
+
+@article{hunter_matplotlib_2007,
+	title = {Matplotlib: {A} {2D} {Graphics} {Environment}},
+	volume = {9},
+	issn = {1558-366X},
+	shorttitle = {Matplotlib},
+	doi = {10.1109/MCSE.2007.55},
+	number = {3},
+	journal = {Computing in Science Engineering},
+	author = {Hunter, John D.},
+	month = may,
+	year = {2007},
+	note = {Conference Name: Computing in Science Engineering},
+	keywords = {application development, Computer languages, Equations, Graphical user interfaces, Graphics, Image generation, Interpolation, Operating systems, Packaging, Programming profession, Python, scientific programming, scripting languages, User interfaces},
+	pages = {90--95},
+}
+
+@misc{davis_proplot_2021,
+	title = {{ProPlot}},
+	url = {https://zenodo.org/record/5602155},
+	urldate = {2022-01-06},
+	publisher = {Zenodo},
+	author = {Davis, Luke L. B.},
+	month = oct,
+	year = {2021},
+	doi = {10.5281/zenodo.5602155},
+	note = {Language: eng},
+	keywords = {data visualization, python},
+}
+
+@techreport{DOE:2020,
+author = {Balmaseda, M. and Barros, A. and  Hagos, S. and Kirtman, B. and Ma, H-Y. and Ming, Y. and Pendergrass, A. and Tallapragada, V and Thompson, E.},
+title = {{NOAA-DOE Precipitation Processes and Predictability Workshop.}},
+institution = {U.S.
+Department of Energy and U.S. Department of Commerce NOAA},
+year = {2020},
+number = {DOE/SC-0203; NOAA
+Technical Report OAR CPO-9.},
+}
+
+@article{hu_variations_2011,
+	title = {Variations in {North} {American} {Summer} {Precipitation} {Driven} by the {Atlantic} {Multidecadal} {Oscillation}},
+	volume = {24},
+	issn = {0894-8755, 1520-0442},
+	url = {https://journals.ametsoc.org/view/journals/clim/24/21/2011jcli4060.1.xml},
+	doi = {10.1175/2011JCLI4060.1},
+	language = {EN},
+	number = {21},
+	urldate = {2021-07-15},
+	journal = {Journal of Climate},
+	author = {Hu, Qi and Feng, Song and Oglesby, Robert J.},
+	month = nov,
+	year = {2011},
+	note = {Publisher: American Meteorological Society
+Section: Journal of Climate},
+	pages = {5555--5570},
+}
+
+@article{zhang_decadal_2022,
+	title = {Decadal {Variability} of {Southeast} {US} {Rainfall} in an {Eddying} {Global} {Coupled} {Model}},
+	volume = {49},
+	issn = {1944-8007},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1029/2021GL096709},
+	doi = {10.1029/2021GL096709},
+	language = {en},
+	number = {1},
+	urldate = {2022-01-30},
+	journal = {Geophysical Research Letters},
+	author = {Zhang, Wei and Kirtman, Ben and Siqueira, Leo and Xiang, Baoqiang and Infanti, Johnna and Perlin, Natalie},
+	year = {2022},
+}
+
+@article{ropelewski_north_1986,
+	title = {North {American} precipitation and temperature patterns associated with the {El} {Niño}/{Southern} {Oscillation} ({ENSO})},
+	volume = {114},
+	doi = {10.1175/1520-0493(1986)114&lt;2352:NAPATP&gt;2.0.CO;2},
+	language = {English},
+	number = {12},
+	journal = {Mon. Wea. Rev.},
+	author = {Ropelewski, C. F. and Halpert, M. S.},
+	year = {1986},
+	pages = {2352--2362},
+}
+
+@article{deser_how_2018,
+	title = {How {Well} {Do} {We} {Know} {ENSO}’s {Climate} {Impacts} over {North} {America}, and {How} {Do} {We} {Evaluate} {Models} {Accordingly}?},
+	volume = {31},
+	issn = {0894-8755, 1520-0442},
+	url = {https://journals.ametsoc.org/view/journals/clim/31/13/jcli-d-17-0783.1.xml},
+	doi = {10.1175/JCLI-D-17-0783.1},
+	language = {EN},
+	number = {13},
+	urldate = {2022-01-31},
+	journal = {Journal of Climate},
+	author = {Deser, Clara and Simpson, Isla R. and Phillips, Adam S. and McKinnon, Karen A.},
+	month = jul,
+	year = {2018},
+	note = {Publisher: American Meteorological Society
+Section: Journal of Climate},
+	pages = {4991--5014},
+}
+
+@inproceedings{krizhevsky_imagenet_2012,
+	title = {{ImageNet} {Classification} with {Deep} {Convolutional} {Neural} {Networks}},
+	volume = {25},
+	url = {https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html},
+	urldate = {2022-02-01},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems}},
+	publisher = {Curran Associates, Inc.},
+	author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	year = {2012},
+}
+
+@article{ropelewski_global_1987,
+	title = {Global and {Regional} {Scale} {Precipitation} {Patterns} {Associated} with the {El} {Niño}/{Southern} {Oscillation}},
+	volume = {115},
+	issn = {1520-0493, 0027-0644},
+	url = {https://journals.ametsoc.org/view/journals/mwre/115/8/1520-0493_1987_115_1606_garspp_2_0_co_2.xml},
+	doi = {10.1175/1520-0493(1987)115<1606:GARSPP>2.0.CO;2},
+	language = {EN},
+	number = {8},
+	urldate = {2022-02-02},
+	journal = {Monthly Weather Review},
+	author = {Ropelewski, C. F. and Halpert, M. S.},
+	month = aug,
+	year = {1987},
+	note = {Publisher: American Meteorological Society
+Section: Monthly Weather Review},
+	pages = {1606--1626},
+}
+
+@article{higgins_dominant_2000,
+	title = {Dominant {Factors} {Influencing} the {Seasonal} {Predictability} of {U}.{S}. {Precipitation} and {Surface} {Air} {Temperature}},
+	volume = {13},
+	issn = {0894-8755, 1520-0442},
+	url = {https://journals.ametsoc.org/view/journals/clim/13/22/1520-0442_2000_013_3994_dfitsp_2.0.co_2.xml},
+	doi = {10.1175/1520-0442(2000)013<3994:DFITSP>2.0.CO;2},
+	language = {EN},
+	number = {22},
+	urldate = {2022-02-02},
+	journal = {Journal of Climate},
+	author = {Higgins, R. W. and Leetmaa, A. and Xue, Y. and Barnston, A.},
+	month = nov,
+	year = {2000},
+	note = {Publisher: American Meteorological Society
+Section: Journal of Climate},
+	pages = {3994--4017},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
